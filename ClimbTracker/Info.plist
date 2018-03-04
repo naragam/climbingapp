@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allows you to add saved photos of your climbs</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allows you to add photos of your climbs and send nudes.</string>
 </dict>
 </plist>

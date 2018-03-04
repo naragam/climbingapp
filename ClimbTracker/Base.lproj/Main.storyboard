@@ -1,14 +1,97 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O9d-Vo-BzR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Your Climbs-->
+        <scene sceneID="GBy-9S-de8">
+            <objects>
+                <tableViewController id="6dK-lB-A3X" customClass="ClimbTableViewController" customModule="ClimbTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="bVn-6s-doY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClimbTableViewCell" rowHeight="90" id="5Yr-LD-gjZ" customClass="ClimbTableViewCell" customModule="ClimbTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Yr-LD-gjZ" id="hKY-W2-0K1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewRiverGorgeCave" translatesAutoresizingMaskIntoConstraints="NO" id="tjz-rY-QUw">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ClimbNames" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSf-Lw-OoH">
+                                            <rect key="frame" x="98" y="8" width="269" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="V*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mw3-hm-uWn">
+                                            <rect key="frame" x="98" y="37" width="88" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="firstBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e3V-6U-E3T" customClass="ClimbRatingView" customModule="ClimbTracker" customModuleProvider="target">
+                                            <rect key="frame" x="185" y="37" width="165" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </stackView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.074162496539999997" green="0.44693845180000003" blue="0.2273460839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="gradeLabel" destination="mw3-hm-uWn" id="8Wx-wV-6eM"/>
+                                    <outlet property="nameLabel" destination="XSf-Lw-OoH" id="zp4-p2-BDt"/>
+                                    <outlet property="photoImageView" destination="tjz-rY-QUw" id="3x0-2b-Lmf"/>
+                                    <outlet property="ratingControl" destination="e3V-6U-E3T" id="Nzo-7F-60e"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowClimbDetail" id="77r-S4-690"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6dK-lB-A3X" id="HPt-Qu-aX4"/>
+                            <outlet property="delegate" destination="6dK-lB-A3X" id="1MX-f5-xn3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Climbs" id="aDf-gI-blx">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="EWW-1S-Uio">
+                                <connections>
+                                    <segue destination="q1H-xw-Afu" kind="presentation" identifier="AddClimb" id="YZQ-3r-Xjg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Home" id="GHU-GP-OVP">
+                                <connections>
+                                    <action selector="GoHome:" destination="6dK-lB-A3X" id="k0v-e1-pEL"/>
+                                    <segue destination="O9d-Vo-BzR" kind="show" identifier="climbToHomeSegue" id="7MO-TL-i62"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ls3-78-Ed6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.5999999999999" y="161.46926536731635"/>
+        </scene>
+        <!--Climb-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ClimbViewController" customModule="ClimbTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +99,678 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreySkyMountain" translatesAutoresizingMaskIntoConstraints="NO" id="pPD-31-c9M">
+                                <rect key="frame" x="0.0" y="0.0" width="1216" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AR-gT-B0P" userLabel="BackgroundView">
+                                <rect key="frame" x="16" y="72" width="343" height="595"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sp6-dS-Oqd" userLabel="GradeViewHolder">
+                                        <rect key="frame" x="8" y="8" width="327" height="579"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="RQ4-bZ-9xz">
+                                                <rect key="frame" x="8" y="95" width="311" height="135"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2F-gy-68I">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="u2x-gE-n5O" customClass="DesignableSlider" customModule="ClimbTracker" customModuleProvider="target">
+                                                        <rect key="frame" x="-2" y="23" width="315" height="23"/>
+                                                        <color key="thumbTintColor" red="0.20412869810000001" green="0.62283435880000004" blue="0.33950116050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="AwesomeUISlider"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="gradeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rrh-r5-W3E"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How far did you climb?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv7-9U-pIs">
+                                                        <rect key="frame" x="0.0" y="45" width="193.5" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="HY3-FK-kMG" customClass="DesignableSlider" customModule="ClimbTracker" customModuleProvider="target">
+                                                        <rect key="frame" x="-2" y="68" width="315" height="23"/>
+                                                        <color key="thumbTintColor" red="0.20412869810000001" green="0.62283435880000004" blue="0.33950116050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="AwesomeUISlider"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="completionSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="fLr-cb-C87"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many times did you take?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLI-n0-NFa">
+                                                        <rect key="frame" x="0.0" y="90" width="258.5" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="XhX-03-EjF" customClass="DesignableSlider" customModule="ClimbTracker" customModuleProvider="target">
+                                                        <rect key="frame" x="-2" y="113" width="315" height="23"/>
+                                                        <color key="thumbTintColor" red="0.20412869810000001" green="0.62283435880000004" blue="0.33950116050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="AwesomeUISlider"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="attemptsSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="aKb-yu-kWJ"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="XhX-03-EjF" firstAttribute="leading" secondItem="RQ4-bZ-9xz" secondAttribute="leadingMargin" id="0Sh-JZ-0in"/>
+                                                    <constraint firstItem="u2x-gE-n5O" firstAttribute="trailing" secondItem="RQ4-bZ-9xz" secondAttribute="trailingMargin" id="Cht-sj-ssF"/>
+                                                    <constraint firstItem="HY3-FK-kMG" firstAttribute="height" secondItem="u2x-gE-n5O" secondAttribute="height" id="E67-Y2-pKi"/>
+                                                    <constraint firstItem="u2x-gE-n5O" firstAttribute="leading" secondItem="RQ4-bZ-9xz" secondAttribute="leadingMargin" id="cLv-Qk-fyv"/>
+                                                    <constraint firstItem="XhX-03-EjF" firstAttribute="trailing" secondItem="RQ4-bZ-9xz" secondAttribute="trailingMargin" id="dEQ-vY-xWg"/>
+                                                    <constraint firstItem="HY3-FK-kMG" firstAttribute="leading" secondItem="RQ4-bZ-9xz" secondAttribute="leadingMargin" id="jbX-TP-ALV"/>
+                                                    <constraint firstItem="HY3-FK-kMG" firstAttribute="trailing" secondItem="RQ4-bZ-9xz" secondAttribute="trailingMargin" id="wJA-G3-CCh"/>
+                                                    <constraint firstItem="XhX-03-EjF" firstAttribute="height" secondItem="u2x-gE-n5O" secondAttribute="height" id="xkW-8F-oVm"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DV-2Y-CNS">
+                                                <rect key="frame" x="237" y="46" width="82" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssL-rq-i4Q">
+                                                <rect key="frame" x="0.0" y="46" width="82" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Climb's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oN2-bB-iTG">
+                                                <rect key="frame" x="0.0" y="8" width="327" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wTd-Vj-ixu" customClass="ClimbRatingView" customModule="ClimbTracker" customModuleProvider="target">
+                                                <rect key="frame" x="37" y="520" width="255" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </stackView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewRiverGorgeCave" translatesAutoresizingMaskIntoConstraints="NO" id="ao7-Uk-DET">
+                                                <rect key="frame" x="52" y="294" width="224" height="218"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="flQ-g5-j8S" appends="YES" id="9ej-QR-4YE"/>
+                                                </connections>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DICKS AND TITS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s01-MZ-8Xa">
+                                                <rect key="frame" x="8" y="249" width="311" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.Intro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpi-hJ-oLi">
+                                                <rect key="frame" x="90" y="46" width="139" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="g3e-BH-jxc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="kpi-hJ-oLi" firstAttribute="leading" secondItem="ssL-rq-i4Q" secondAttribute="trailing" constant="8" symbolic="YES" id="039-5w-xl0"/>
+                                            <constraint firstItem="ssL-rq-i4Q" firstAttribute="leading" secondItem="sp6-dS-Oqd" secondAttribute="leading" id="4SK-C2-4h8"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="RQ4-bZ-9xz" secondAttribute="trailing" id="6Ib-ZG-nxd"/>
+                                            <constraint firstItem="oN2-bB-iTG" firstAttribute="top" secondItem="sp6-dS-Oqd" secondAttribute="top" constant="8" id="Cj3-fc-1Qi"/>
+                                            <constraint firstItem="2DV-2Y-CNS" firstAttribute="top" secondItem="oN2-bB-iTG" secondAttribute="bottom" constant="8" id="DIA-EE-6gf"/>
+                                            <constraint firstItem="ssL-rq-i4Q" firstAttribute="top" secondItem="oN2-bB-iTG" secondAttribute="bottom" constant="8" id="SOn-My-0Q4"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="2DV-2Y-CNS" secondAttribute="trailing" id="SRg-Sa-R5i"/>
+                                            <constraint firstItem="RQ4-bZ-9xz" firstAttribute="leading" secondItem="sp6-dS-Oqd" secondAttribute="leadingMargin" id="TWd-Tz-xE4"/>
+                                            <constraint firstAttribute="trailing" secondItem="oN2-bB-iTG" secondAttribute="trailing" id="Wiv-u3-idc"/>
+                                            <constraint firstItem="kpi-hJ-oLi" firstAttribute="top" secondItem="ssL-rq-i4Q" secondAttribute="top" id="Yjd-gb-Kce"/>
+                                            <constraint firstItem="2DV-2Y-CNS" firstAttribute="width" secondItem="sp6-dS-Oqd" secondAttribute="width" multiplier="0.25" id="c27-XR-6nZ"/>
+                                            <constraint firstItem="RQ4-bZ-9xz" firstAttribute="top" secondItem="kpi-hJ-oLi" secondAttribute="bottom" constant="8" symbolic="YES" id="u4Z-GL-doV"/>
+                                            <constraint firstItem="ssL-rq-i4Q" firstAttribute="width" secondItem="sp6-dS-Oqd" secondAttribute="width" multiplier="0.25" id="vgs-Cf-poo"/>
+                                            <constraint firstItem="oN2-bB-iTG" firstAttribute="leading" secondItem="sp6-dS-Oqd" secondAttribute="leading" id="za7-uc-f0x"/>
+                                            <constraint firstItem="2DV-2Y-CNS" firstAttribute="leading" secondItem="kpi-hJ-oLi" secondAttribute="trailing" constant="8" symbolic="YES" id="znn-gB-x8I"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="sp6-dS-Oqd" secondAttribute="trailing" id="T4a-OI-aSZ"/>
+                                    <constraint firstItem="sp6-dS-Oqd" firstAttribute="leading" secondItem="9AR-gT-B0P" secondAttribute="leadingMargin" id="dMv-VQ-YUQ"/>
+                                    <constraint firstItem="sp6-dS-Oqd" firstAttribute="top" secondItem="9AR-gT-B0P" secondAttribute="top" constant="8" id="klE-OR-tj2"/>
+                                    <constraint firstAttribute="bottom" secondItem="sp6-dS-Oqd" secondAttribute="bottom" constant="8" id="m6D-A0-iKR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pPD-31-c9M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1bQ-fm-oE1"/>
+                            <constraint firstItem="9AR-gT-B0P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3DP-fa-rOF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9AR-gT-B0P" secondAttribute="trailing" id="Fma-BQ-JZi"/>
+                            <constraint firstItem="9AR-gT-B0P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iW0-OR-b59"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9AR-gT-B0P" secondAttribute="bottom" id="kSm-B4-BOd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pPD-31-c9M" secondAttribute="bottom" id="t5e-38-rKP"/>
+                            <constraint firstItem="pPD-31-c9M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t9w-0F-CVL"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Climb" id="07F-cL-RrV">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gdn-1X-uDy">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="J7J-bE-kpQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="OFQ-Fu-63H">
+                            <connections>
+                                <segue destination="nBp-8T-cIk" kind="unwind" unwindAction="unwindToClimbListWithSender:" id="2Np-xH-4uI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="ClimbDateTextField" destination="s01-MZ-8Xa" id="aKq-G6-94G"/>
+                        <outlet property="attemptsLabel" destination="2DV-2Y-CNS" id="B1l-Mg-Jxc"/>
+                        <outlet property="attemptsSlide" destination="XhX-03-EjF" id="enD-Zg-qpF"/>
+                        <outlet property="climbSaveButton" destination="OFQ-Fu-63H" id="Rbz-Mw-r5B"/>
+                        <outlet property="completionLabel" destination="ssL-rq-i4Q" id="Jgm-bo-GOl"/>
+                        <outlet property="completionSlide" destination="HY3-FK-kMG" id="Hdg-tD-ZeT"/>
+                        <outlet property="gradeLabel" destination="kpi-hJ-oLi" id="LKw-M6-rBx"/>
+                        <outlet property="gradeSlide" destination="u2x-gE-n5O" id="kmI-v4-K35"/>
+                        <outlet property="nameTextField" destination="oN2-bB-iTG" id="JFD-6S-VGb"/>
+                        <outlet property="photoImageView" destination="ao7-Uk-DET" id="y4Z-J4-1s2"/>
+                        <outlet property="ratingControl" destination="wTd-Vj-ixu" id="FIJ-s3-DfG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="flQ-g5-j8S">
+                    <connections>
+                        <action selector="selectImageFromPhone:" destination="BYZ-38-t0r" id="1w7-uh-81j"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <exit id="nBp-8T-cIk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="3588" y="160.56971514242881"/>
+        </scene>
+        <!--Options View Controller-->
+        <scene sceneID="akf-fw-Gkb">
+            <objects>
+                <viewController id="O9d-Vo-BzR" customClass="OptionsViewController" customModule="ClimbTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQF-hE-ysI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z4w-wu-bhx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IfD-gI-mQU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whereJacPooped" translatesAutoresizingMaskIntoConstraints="NO" id="rFO-ag-qUb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="middleFinger" translatesAutoresizingMaskIntoConstraints="NO" id="Kvn-8Z-ba5">
+                                <rect key="frame" x="30" y="357" width="179" height="283"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="90g-eW-WlD" appends="YES" id="wTH-yR-72X"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumbsUp" translatesAutoresizingMaskIntoConstraints="NO" id="jip-Lk-9cA">
+                                <rect key="frame" x="42" y="41" width="189" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="N8C-Kn-fEa" appends="YES" id="N0j-ni-EZu"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fistBump" translatesAutoresizingMaskIntoConstraints="NO" id="5aC-fe-xdj">
+                                <rect key="frame" x="133" y="270" width="212" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lXH-W5-eZF" appends="YES" id="9CS-Qb-BAQ"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3269521789" green="0.99759148320000002" blue="0.54377774999999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dRu-EI-4ND"/>
+                    <connections>
+                        <outlet property="BoulderingButton" destination="5aC-fe-xdj" id="ZBx-3x-LGa"/>
+                        <outlet property="ClimbingButton" destination="jip-Lk-9cA" id="YrZ-Zo-aHT"/>
+                        <outlet property="DataButton" destination="Kvn-8Z-ba5" id="TYo-zv-CKE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubG-Wd-pve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="N8C-Kn-fEa">
+                    <connections>
+                        <action selector="GoToClimbing:" destination="O9d-Vo-BzR" id="XY5-uc-noH"/>
+                        <segue destination="ZVd-Tl-lPR" kind="show" identifier="climbSegue" id="cHY-ZL-ir1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lXH-W5-eZF">
+                    <connections>
+                        <action selector="GoToBouldering:" destination="O9d-Vo-BzR" id="UTG-rV-iHT"/>
+                        <segue destination="xcj-N7-ylW" kind="show" identifier="boulderSegue" id="ipQ-6h-g2U"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="90g-eW-WlD">
+                    <connections>
+                        <action selector="GoToData:" destination="O9d-Vo-BzR" id="fE5-aI-4is"/>
+                        <segue destination="Y7J-p2-B5m" kind="show" identifier="dataSegue" id="DQF-NJ-GVG"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-116" y="949"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zQk-0m-ujc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZVd-Tl-lPR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pic-0r-z6K">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6dK-lB-A3X" kind="relationship" relationship="rootViewController" id="meC-ib-M5b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ppi-YI-0Cg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="161"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xm9-UB-jie">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q1H-xw-Afu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l6g-fm-3Ww">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ne3-Y9-pZt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hG6-NE-mLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2732" y="495.20239880059972"/>
+        </scene>
+        <!--Your Boulders-->
+        <scene sceneID="KKd-Kz-dDJ">
+            <objects>
+                <tableViewController id="5h9-Ws-NEa" customClass="BoulderTableViewController" customModule="ClimbTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="J26-Gh-n1f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoulderTableViewCell" rowHeight="90" id="401-2R-9eo" customClass="BoulderTableViewCell" customModule="ClimbTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="401-2R-9eo" id="ymW-Pq-xmT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewRiverGorgeCave" translatesAutoresizingMaskIntoConstraints="NO" id="xT7-pZ-wb2">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ClimbNames" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa7-Qc-Ia4">
+                                            <rect key="frame" x="98" y="8" width="269" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="V*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1h-tt-zTg">
+                                            <rect key="frame" x="98" y="37" width="62" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="firstBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kbX-DO-rZY" customClass="ClimbRatingView" customModule="ClimbTracker" customModuleProvider="target">
+                                            <rect key="frame" x="185" y="37" width="165" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </stackView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.074162496539999997" green="0.44693845180000003" blue="0.2273460839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="gradeLabel" destination="i1h-tt-zTg" id="9ag-uZ-gSI"/>
+                                    <outlet property="nameLabel" destination="xa7-Qc-Ia4" id="QGc-ER-io8"/>
+                                    <outlet property="photoImageView" destination="xT7-pZ-wb2" id="050-bv-K3e"/>
+                                    <outlet property="ratingControl" destination="kbX-DO-rZY" id="Tu9-B9-Bbk"/>
+                                    <segue destination="hUs-NL-uRB" kind="show" identifier="ShowBoulderDetail" id="Ecl-rF-6Pb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5h9-Ws-NEa" id="k22-Na-GMF"/>
+                            <outlet property="delegate" destination="5h9-Ws-NEa" id="5Nd-0d-QH9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Boulders" id="aBl-lw-rvJ">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="wy9-Zi-iXb">
+                                <connections>
+                                    <segue destination="AKT-o5-RA2" kind="presentation" identifier="AddBoulder" id="UR7-qv-pkP"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Home" id="Op6-1u-M9y">
+                                <connections>
+                                    <action selector="GoHome:" destination="5h9-Ws-NEa" id="pkD-8m-bQm"/>
+                                    <segue destination="O9d-Vo-BzR" kind="show" identifier="boulderToHomeSegue" id="DxK-30-KXT"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAp-X3-rgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="1539"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="Ixj-88-4NJ">
+            <objects>
+                <viewController id="Y7J-p2-B5m" customClass="DataViewController" customModule="ClimbTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BXP-Oa-pkz"/>
+                        <viewControllerLayoutGuide type="bottom" id="VFU-y0-tVo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JPH-i7-KRf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data go here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gj-f2-5FJ">
+                                <rect key="frame" x="122" y="317" width="131" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vrQ-Pg-a2e" appends="YES" id="JdJ-ob-ALF"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSl-pv-yx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vrQ-Pg-a2e">
+                    <connections>
+                        <segue destination="O9d-Vo-BzR" kind="show" identifier="dataToHomeSegue" id="x3b-Z2-PeM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-116" y="1781"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uP2-Mu-nq9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xcj-N7-ylW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A2S-cJ-tgX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5h9-Ws-NEa" kind="relationship" relationship="rootViewController" id="q1l-OT-R4G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ryd-AL-CXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="1539"/>
+        </scene>
+        <!--Boulder-->
+        <scene sceneID="0gG-ts-4po">
+            <objects>
+                <viewController id="hUs-NL-uRB" customClass="BoulderViewController" customModule="ClimbTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hOX-Xf-TTV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wf7-Wi-230"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7gf-7u-NAU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreySkyMountain" translatesAutoresizingMaskIntoConstraints="NO" id="fEk-7I-G7b">
+                                <rect key="frame" x="0.0" y="0.0" width="1216" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRx-HB-WBk" userLabel="BackgroundView">
+                                <rect key="frame" x="16" y="72" width="343" height="595"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tW-7k-YmX" userLabel="GradeViewHolder">
+                                        <rect key="frame" x="8" y="8" width="327" height="579"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Uv7-lE-MAN">
+                                                <rect key="frame" x="8" y="95" width="311" height="135.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03K-DW-DSr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="17" translatesAutoresizingMaskIntoConstraints="NO" id="57n-Fi-h1Y" customClass="DesignableSlider" customModule="ClimbTracker" customModuleProvider="target">
+                                                        <rect key="frame" x="-2" y="23" width="315" height="23"/>
+                                                        <color key="thumbTintColor" red="0.20412869810000001" green="0.62283435880000004" blue="0.33950116050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="AwesomeUISlider"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="gradeSlider:" destination="hUs-NL-uRB" eventType="valueChanged" id="VXq-gu-LH7"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How far did you climb?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc9-kG-brC">
+                                                        <rect key="frame" x="0.0" y="45" width="193.5" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="AMF-7g-PLk" customClass="DesignableSlider" customModule="ClimbTracker" customModuleProvider="target">
+                                                        <rect key="frame" x="-2" y="68" width="315" height="23"/>
+                                                        <color key="thumbTintColor" red="0.20412869810000001" green="0.62283435880000004" blue="0.33950116050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="AwesomeUISlider"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="completionSlider:" destination="hUs-NL-uRB" eventType="valueChanged" id="Qat-Ih-k4O"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many attempts did you make?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpP-2e-pca">
+                                                        <rect key="frame" x="0.0" y="90" width="297.5" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="zWB-av-of4" customClass="DesignableSlider" customModule="ClimbTracker" customModuleProvider="target">
+                                                        <rect key="frame" x="-2" y="113" width="315" height="23.5"/>
+                                                        <color key="thumbTintColor" red="0.20412869810000001" green="0.62283435880000004" blue="0.33950116050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="AwesomeUISlider"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="attemptsSlider:" destination="hUs-NL-uRB" eventType="valueChanged" id="XBt-6t-GS6"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="57n-Fi-h1Y" firstAttribute="trailing" secondItem="Uv7-lE-MAN" secondAttribute="trailingMargin" id="Cto-7i-g6e"/>
+                                                    <constraint firstItem="zWB-av-of4" firstAttribute="trailing" secondItem="Uv7-lE-MAN" secondAttribute="trailingMargin" id="G3C-W4-mIZ"/>
+                                                    <constraint firstItem="AMF-7g-PLk" firstAttribute="height" secondItem="57n-Fi-h1Y" secondAttribute="height" id="UYe-dm-82b"/>
+                                                    <constraint firstItem="AMF-7g-PLk" firstAttribute="leading" secondItem="Uv7-lE-MAN" secondAttribute="leadingMargin" id="ejM-xQ-4nf"/>
+                                                    <constraint firstItem="57n-Fi-h1Y" firstAttribute="leading" secondItem="Uv7-lE-MAN" secondAttribute="leadingMargin" id="hWv-uZ-ktw"/>
+                                                    <constraint firstItem="zWB-av-of4" firstAttribute="height" secondItem="57n-Fi-h1Y" secondAttribute="height" id="jdv-SE-QE2"/>
+                                                    <constraint firstItem="AMF-7g-PLk" firstAttribute="trailing" secondItem="Uv7-lE-MAN" secondAttribute="trailingMargin" id="vZO-13-Ic8"/>
+                                                    <constraint firstItem="zWB-av-of4" firstAttribute="leading" secondItem="Uv7-lE-MAN" secondAttribute="leadingMargin" id="ySQ-CK-Wfp"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zND-8J-jOJ">
+                                                <rect key="frame" x="237" y="46" width="82" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clF-8f-Olb">
+                                                <rect key="frame" x="123" y="46" width="82" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAw-ss-QLu">
+                                                <rect key="frame" x="0.0" y="46" width="82" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Boulder's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Nq-76-6fg">
+                                                <rect key="frame" x="0.0" y="8" width="327" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fz5-BM-ha2" customClass="ClimbRatingView" customModule="ClimbTracker" customModuleProvider="target">
+                                                <rect key="frame" x="37" y="520" width="255" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </stackView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewRiverGorgeCave" translatesAutoresizingMaskIntoConstraints="NO" id="L5k-n7-NQN">
+                                                <rect key="frame" x="52" y="294" width="224" height="218"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="sYa-vT-RFs" appends="YES" id="qnS-3q-jv8"/>
+                                                </connections>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TITS AND DICKS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXN-FU-k9g">
+                                                <rect key="frame" x="9" y="246" width="311" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Uv7-lE-MAN" firstAttribute="top" secondItem="clF-8f-Olb" secondAttribute="bottom" constant="8" id="1Na-uc-7Ee"/>
+                                            <constraint firstItem="yAw-ss-QLu" firstAttribute="leading" secondItem="1tW-7k-YmX" secondAttribute="leading" id="1xr-S7-ZPa"/>
+                                            <constraint firstItem="zND-8J-jOJ" firstAttribute="width" secondItem="1tW-7k-YmX" secondAttribute="width" multiplier="0.25" id="Bh7-n7-H09"/>
+                                            <constraint firstItem="clF-8f-Olb" firstAttribute="width" secondItem="1tW-7k-YmX" secondAttribute="width" multiplier="0.25" id="Duy-2x-ozg"/>
+                                            <constraint firstItem="clF-8f-Olb" firstAttribute="centerX" secondItem="1tW-7k-YmX" secondAttribute="centerX" id="HAW-5F-KPy"/>
+                                            <constraint firstItem="yAw-ss-QLu" firstAttribute="width" secondItem="1tW-7k-YmX" secondAttribute="width" multiplier="0.25" id="HaM-wL-hR1"/>
+                                            <constraint firstItem="4Nq-76-6fg" firstAttribute="leading" secondItem="1tW-7k-YmX" secondAttribute="leading" id="Jnn-3V-uUz"/>
+                                            <constraint firstItem="yAw-ss-QLu" firstAttribute="top" secondItem="4Nq-76-6fg" secondAttribute="bottom" constant="8" id="Nqw-Tg-5Hh"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Uv7-lE-MAN" secondAttribute="trailing" id="UqA-13-ewq"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="zND-8J-jOJ" secondAttribute="trailing" id="fTJ-0I-1b0"/>
+                                            <constraint firstItem="zND-8J-jOJ" firstAttribute="top" secondItem="4Nq-76-6fg" secondAttribute="bottom" constant="8" id="loi-ka-WT6"/>
+                                            <constraint firstItem="clF-8f-Olb" firstAttribute="height" secondItem="yAw-ss-QLu" secondAttribute="height" multiplier="2" id="mAN-Wj-KYh"/>
+                                            <constraint firstItem="Uv7-lE-MAN" firstAttribute="leading" secondItem="1tW-7k-YmX" secondAttribute="leadingMargin" id="pOn-vE-UVa"/>
+                                            <constraint firstItem="4Nq-76-6fg" firstAttribute="top" secondItem="1tW-7k-YmX" secondAttribute="top" constant="8" id="vBD-2U-aZL"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Nq-76-6fg" secondAttribute="trailing" id="wHp-Ap-see"/>
+                                            <constraint firstItem="clF-8f-Olb" firstAttribute="top" secondItem="4Nq-76-6fg" secondAttribute="bottom" constant="8" id="yZ7-pX-DN7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1tW-7k-YmX" firstAttribute="leading" secondItem="WRx-HB-WBk" secondAttribute="leadingMargin" id="0Zd-si-4ac"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="1tW-7k-YmX" secondAttribute="trailing" id="Jly-Eq-e8x"/>
+                                    <constraint firstItem="1tW-7k-YmX" firstAttribute="top" secondItem="WRx-HB-WBk" secondAttribute="top" constant="8" id="MgM-kc-763"/>
+                                    <constraint firstAttribute="bottom" secondItem="1tW-7k-YmX" secondAttribute="bottom" constant="8" id="wsU-7G-55z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wf7-Wi-230" firstAttribute="top" secondItem="fEk-7I-G7b" secondAttribute="bottom" id="7uM-FB-a7H"/>
+                            <constraint firstItem="fEk-7I-G7b" firstAttribute="leading" secondItem="7gf-7u-NAU" secondAttribute="leading" id="UuQ-wg-AAx"/>
+                            <constraint firstItem="Wf7-Wi-230" firstAttribute="top" secondItem="WRx-HB-WBk" secondAttribute="bottom" id="Z2F-xl-q4E"/>
+                            <constraint firstItem="fEk-7I-G7b" firstAttribute="top" secondItem="7gf-7u-NAU" secondAttribute="top" id="dBe-xg-9sY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WRx-HB-WBk" secondAttribute="trailing" id="gpv-gv-PCJ"/>
+                            <constraint firstItem="WRx-HB-WBk" firstAttribute="leading" secondItem="7gf-7u-NAU" secondAttribute="leadingMargin" id="hgZ-PK-U2a"/>
+                            <constraint firstItem="WRx-HB-WBk" firstAttribute="top" secondItem="hOX-Xf-TTV" secondAttribute="bottom" constant="8" id="jhW-W7-w1D"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Boulder" id="k4K-DZ-Bh4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wPa-E9-ABS">
+                            <connections>
+                                <action selector="cancel:" destination="hUs-NL-uRB" id="jGp-XS-Neu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kq9-wF-SfI">
+                            <connections>
+                                <segue destination="5gA-I3-1TR" kind="unwind" unwindAction="unwindToBoulderListWithSender:" id="YDj-Qw-DYS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="BoulderDateTextField" destination="CXN-FU-k9g" id="FH7-bo-R4U"/>
+                        <outlet property="BoulderSaveButton" destination="kq9-wF-SfI" id="Pkg-l2-wUS"/>
+                        <outlet property="attemptsLabel" destination="zND-8J-jOJ" id="JgO-Kt-tKo"/>
+                        <outlet property="attemptsSlide" destination="zWB-av-of4" id="DrO-dU-1kq"/>
+                        <outlet property="completionLabel" destination="yAw-ss-QLu" id="dTP-8l-e8J"/>
+                        <outlet property="completionSlide" destination="AMF-7g-PLk" id="cSS-OY-K93"/>
+                        <outlet property="gradeLabel" destination="clF-8f-Olb" id="IAM-ds-GhT"/>
+                        <outlet property="gradeSlide" destination="57n-Fi-h1Y" id="zHZ-nj-aBJ"/>
+                        <outlet property="nameTextField" destination="4Nq-76-6fg" id="cZr-5A-bha"/>
+                        <outlet property="photoImageView" destination="L5k-n7-NQN" id="kj5-dm-FwQ"/>
+                        <outlet property="ratingControl" destination="fz5-BM-ha2" id="1Vy-bh-7Cw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bYg-nn-kuB" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sYa-vT-RFs">
+                    <connections>
+                        <action selector="selectImageFromPhone:" destination="hUs-NL-uRB" id="HLG-ct-Rnj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <exit id="5gA-I3-1TR" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3648.8000000000002" y="1538.6806596701651"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dOf-S6-N0i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AKT-o5-RA2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M2L-Oj-CwX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hUs-NL-uRB" kind="relationship" relationship="rootViewController" id="pJN-ri-EOa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDM-ot-tJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2732" y="1979"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AwesomeUISlider" width="23" height="23"/>
+        <image name="GreySkyMountain" width="1216" height="640"/>
+        <image name="NewRiverGorgeCave" width="480" height="480"/>
+        <image name="fistBump" width="1061" height="866"/>
+        <image name="middleFinger" width="1128" height="1420"/>
+        <image name="thumbsUp" width="1008" height="1312"/>
+        <image name="whereJacPooped" width="480" height="360"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pJN-ri-EOa"/>
+        <segue reference="x3b-Z2-PeM"/>
+        <segue reference="77r-S4-690"/>
+    </inferredMetricsTieBreakers>
 </document>

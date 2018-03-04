@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E235802F1F0DE0B700302B79 /* BoulderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235802E1F0DE0B700302B79 /* BoulderViewController.swift */; };
+		E23580311F0DE16B00302B79 /* boulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23580301F0DE16B00302B79 /* boulder.swift */; };
+		E23580331F0DE28800302B79 /* BoulderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23580321F0DE28800302B79 /* BoulderTableViewController.swift */; };
+		E241E0B81EDA27F00013E266 /* climb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241E0B71EDA27F00013E266 /* climb.swift */; };
+		E241E0BA1EDA4F1A0013E266 /* DesignableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241E0B91EDA4F1A0013E266 /* DesignableSlider.swift */; };
+		E241E0BC1EDA581F0013E266 /* ClimbTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241E0BB1EDA581F0013E266 /* ClimbTableViewController.swift */; };
+		E241E0BE1EDA59A10013E266 /* ClimbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E241E0BD1EDA59A10013E266 /* ClimbTableViewCell.swift */; };
+		E24533361F32E21500B6BE3F /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24533351F32E21500B6BE3F /* chartViewController.swift */; };
+		E278EA841F205DD30002114A /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278EA831F205DD30002114A /* DataViewController.swift */; };
 		E2C026241EB83AC1007D26A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C026231EB83AC1007D26A7 /* AppDelegate.swift */; };
-		E2C026261EB83AC1007D26A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C026251EB83AC1007D26A7 /* ViewController.swift */; };
+		E2C026261EB83AC1007D26A7 /* ClimbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C026251EB83AC1007D26A7 /* ClimbViewController.swift */; };
 		E2C026291EB83AC1007D26A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C026271EB83AC1007D26A7 /* Main.storyboard */; };
 		E2C0262B1EB83AC1007D26A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C0262A1EB83AC1007D26A7 /* Assets.xcassets */; };
 		E2C0262E1EB83AC1007D26A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C0262C1EB83AC1007D26A7 /* LaunchScreen.storyboard */; };
 		E2C026391EB83AC1007D26A7 /* ClimbTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C026381EB83AC1007D26A7 /* ClimbTrackerTests.swift */; };
+		E2C026441EBED686007D26A7 /* ClimbRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C026431EBED686007D26A7 /* ClimbRatingView.swift */; };
+		E2D6ACA71F1DC2F7001B6C48 /* BoulderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D6ACA61F1DC2F7001B6C48 /* BoulderTableViewCell.swift */; };
+		E2E3328A1EF70ABD006596DE /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E332891EF70ABD006596DE /* OptionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +38,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E235802E1F0DE0B700302B79 /* BoulderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoulderViewController.swift; sourceTree = "<group>"; };
+		E23580301F0DE16B00302B79 /* boulder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = boulder.swift; sourceTree = "<group>"; };
+		E23580321F0DE28800302B79 /* BoulderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoulderTableViewController.swift; sourceTree = "<group>"; };
+		E241E0B71EDA27F00013E266 /* climb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = climb.swift; sourceTree = "<group>"; };
+		E241E0B91EDA4F1A0013E266 /* DesignableSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableSlider.swift; sourceTree = "<group>"; };
+		E241E0BB1EDA581F0013E266 /* ClimbTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbTableViewController.swift; sourceTree = "<group>"; };
+		E241E0BD1EDA59A10013E266 /* ClimbTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbTableViewCell.swift; sourceTree = "<group>"; };
+		E24533351F32E21500B6BE3F /* chartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
+		E278EA831F205DD30002114A /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		E2C026201EB83AC1007D26A7 /* ClimbTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimbTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C026231EB83AC1007D26A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2C026251EB83AC1007D26A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2C026251EB83AC1007D26A7 /* ClimbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbViewController.swift; sourceTree = "<group>"; };
 		E2C026281EB83AC1007D26A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2C0262A1EB83AC1007D26A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2C0262D1EB83AC1007D26A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +57,9 @@
 		E2C026341EB83AC1007D26A7 /* ClimbTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimbTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C026381EB83AC1007D26A7 /* ClimbTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbTrackerTests.swift; sourceTree = "<group>"; };
 		E2C0263A1EB83AC1007D26A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2C026431EBED686007D26A7 /* ClimbRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbRatingView.swift; sourceTree = "<group>"; };
+		E2D6ACA61F1DC2F7001B6C48 /* BoulderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoulderTableViewCell.swift; sourceTree = "<group>"; };
+		E2E332891EF70ABD006596DE /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +102,20 @@
 			isa = PBXGroup;
 			children = (
 				E2C026231EB83AC1007D26A7 /* AppDelegate.swift */,
-				E2C026251EB83AC1007D26A7 /* ViewController.swift */,
+				E241E0B91EDA4F1A0013E266 /* DesignableSlider.swift */,
+				E2E332891EF70ABD006596DE /* OptionsViewController.swift */,
+				E2D6ACA61F1DC2F7001B6C48 /* BoulderTableViewCell.swift */,
+				E23580321F0DE28800302B79 /* BoulderTableViewController.swift */,
+				E235802E1F0DE0B700302B79 /* BoulderViewController.swift */,
+				E23580301F0DE16B00302B79 /* boulder.swift */,
+				E241E0BD1EDA59A10013E266 /* ClimbTableViewCell.swift */,
+				E241E0BB1EDA581F0013E266 /* ClimbTableViewController.swift */,
+				E2C026251EB83AC1007D26A7 /* ClimbViewController.swift */,
+				E2C026431EBED686007D26A7 /* ClimbRatingView.swift */,
+				E241E0B71EDA27F00013E266 /* climb.swift */,
+				E278EA831F205DD30002114A /* DataViewController.swift */,
 				E2C026271EB83AC1007D26A7 /* Main.storyboard */,
+				E24533351F32E21500B6BE3F /* chartViewController.swift */,
 				E2C0262A1EB83AC1007D26A7 /* Assets.xcassets */,
 				E2C0262C1EB83AC1007D26A7 /* LaunchScreen.storyboard */,
 				E2C0262F1EB83AC1007D26A7 /* Info.plist */,
@@ -146,6 +182,7 @@
 				TargetAttributes = {
 					E2C0261F1EB83AC1007D26A7 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 699939YJK3;
 						ProvisioningStyle = Automatic;
 					};
 					E2C026331EB83AC1007D26A7 = {
@@ -199,8 +236,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2C026261EB83AC1007D26A7 /* ViewController.swift in Sources */,
+				E241E0BA1EDA4F1A0013E266 /* DesignableSlider.swift in Sources */,
+				E24533361F32E21500B6BE3F /* chartViewController.swift in Sources */,
+				E278EA841F205DD30002114A /* DataViewController.swift in Sources */,
+				E23580331F0DE28800302B79 /* BoulderTableViewController.swift in Sources */,
+				E2E3328A1EF70ABD006596DE /* OptionsViewController.swift in Sources */,
+				E2C026261EB83AC1007D26A7 /* ClimbViewController.swift in Sources */,
+				E23580311F0DE16B00302B79 /* boulder.swift in Sources */,
+				E241E0B81EDA27F00013E266 /* climb.swift in Sources */,
+				E2C026441EBED686007D26A7 /* ClimbRatingView.swift in Sources */,
+				E241E0BE1EDA59A10013E266 /* ClimbTableViewCell.swift in Sources */,
 				E2C026241EB83AC1007D26A7 /* AppDelegate.swift in Sources */,
+				E2D6ACA71F1DC2F7001B6C48 /* BoulderTableViewCell.swift in Sources */,
+				E241E0BC1EDA581F0013E266 /* ClimbTableViewController.swift in Sources */,
+				E235802F1F0DE0B700302B79 /* BoulderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 699939YJK3;
 				INFOPLIST_FILE = ClimbTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourmother.ClimbTracker;
@@ -353,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 699939YJK3;
 				INFOPLIST_FILE = ClimbTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourmother.ClimbTracker;
@@ -408,6 +459,7 @@
 				E2C0263F1EB83AC1007D26A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2C026401EB83AC1007D26A7 /* Build configuration list for PBXNativeTarget "ClimbTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +468,7 @@
 				E2C026421EB83AC1007D26A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
