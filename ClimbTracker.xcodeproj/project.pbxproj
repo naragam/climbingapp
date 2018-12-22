@@ -183,10 +183,12 @@
 					E2C0261F1EB83AC1007D26A7 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 699939YJK3;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					E2C026331EB83AC1007D26A7 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E2C0261F1EB83AC1007D26A7;
 					};
@@ -399,7 +401,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourmother.ClimbTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -415,7 +418,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourmother.ClimbTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -432,7 +436,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourmother.ClimbTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClimbTracker.app/ClimbTracker";
 			};
 			name = Debug;
@@ -450,7 +455,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourmother.ClimbTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClimbTracker.app/ClimbTracker";
 			};
 			name = Release;
